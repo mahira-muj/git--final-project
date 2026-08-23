@@ -58,6 +58,24 @@
         animation: enter .8s cubic-bezier(.2, .8, .2, 1) both;
       }
 
+      nav {
+        position: absolute;
+        top: 1.3rem;
+        right: 1.6rem;
+        display: flex;
+        gap: 1rem;
+      }
+
+      nav a {
+        color: var(--muted);
+        font-size: .9rem;
+        font-weight: 700;
+        text-decoration: none;
+        transition: color .2s ease;
+      }
+
+      nav a:hover, nav a[aria-current="page"] { color: var(--ink); }
+
       .eyebrow {
         margin: 0 0 1rem;
         color: var(--accent-light);
@@ -116,6 +134,11 @@
   <body>
     <div class="orb" aria-hidden="true"></div>
     <main>
+      <nav aria-label="Main navigation">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
       <p class="eyebrow">A fresh beginning</p>
       <h1>Hello, World!new one</h1>
       <p>One small page, an infinite number of possibilities. Make something wonderful today.</p>
